@@ -1,0 +1,56 @@
+<html ng-app="App">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/united/bootstrap.min.css">
+
+<title> TxTimer </title>
+
+<body>
+
+<div class="container col-lg-6 col-lg-offset-3">
+    <div class="page-header">
+        <h1> TxTimer </h1>
+        <span class="help-text">
+            Get notified when your Bitcoin transaction is confirmed.
+        </span>
+        <div id="alert"></div>
+    </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-lg-9">
+                     <label for="select" class="control-label">Transaction ID</label>
+                </div>
+                <div class="col-lg-3">
+                     <label for="select" class="control-label">Confirmation Limit</label>
+                </div>
+            </div>
+        </div>
+        <form id="notify">
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-9">
+                        <input class="form-control" id="txid" type="text" placeholder="TX id">
+                    </div>
+                    <div class="col-lg-3">
+                        <input class=" form-control" id="confirmation_limit" type="text" value="3">
+                    </div>
+                </div>
+            </div>
+            <br />
+            <button href="#" class="btn btn-default btn-lg btn-block">Notify Me!</button>
+        </form>
+        <button style="display: none" href="#" id="stop_alarm" class="btn btn-danger btn-lg btn-block">Stop Alarm</button>
+        <hr />
+        <div id="conf_view" style="display: none">
+            <h3> <span id="current_confs">0</span> / <span id="total_confs">0</span> confirmations </h3>
+            <div class="progress">
+                <div id="conf_bar" class="progress-bar progress-bar-success" style="width: 0%"></div>
+            </div>
+            <hr />
+        </div>
+        <a href="https://github.com/ammario/txtimer">Github</a>
+</div>
+
+
+</body>
+</html>
+<script src="/static/js/app.js"></script> 
