@@ -44,6 +44,7 @@ function stopAlarm() {
 }
 
 function resetUI() {
+    document.title = 'TxTimer';
     $("#conf_view").hide()
 }
 
@@ -65,6 +66,7 @@ function startConfWatch(tx, confs) {
             if(barPct > 1) {
                 barPct = 1
             }
+            document.title = '(' + data.confirmations + '/' + confs + ')' + ' TxTimer';
             $("#conf_bar").css("width", barPct*100 + "%")
             if(data.confirmations >= confs){
               $("#stop_alarm").show()
