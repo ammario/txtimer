@@ -23,7 +23,7 @@ function setAlert(typ, message) {
 function getTx(tid, successCallback, failureCallback) {
     $.ajax({
         type: "GET",
-        url: "http://btc.blockr.io/api/v1/tx/info/" + tid,
+        url: "//btc.blockr.io/api/v1/tx/info/" + tid,
         error: failureCallback,
         success: function(resp){
             successCallback(resp)
